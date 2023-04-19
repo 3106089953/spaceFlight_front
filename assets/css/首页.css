@@ -67,7 +67,7 @@ body::-webkit-scrollbar{
 }
 
 
-.time_anima{
+.system_anima{
   width: 25vw;
   height: 45vw;
   position: absolute;
@@ -76,7 +76,7 @@ body::-webkit-scrollbar{
   animation: heart 1.4s ease-in-out infinite alternate;
 }
 
-.message_anima{
+.news_anima{
   width: 17.2vw;
   height: 17.2vw;
   position: absolute;
@@ -85,7 +85,7 @@ body::-webkit-scrollbar{
   animation: heart 1.4s ease-in-out infinite alternate;
 }
 
-.history_anima{
+.people_anima{
   width: 15.2vw;
   height: 16.5vw;
   position: absolute;
@@ -94,7 +94,7 @@ body::-webkit-scrollbar{
   animation: heart 1.4s ease-in-out infinite alternate;
 }
 
-.hot_anima{
+.history_anima{
   width: 17.2vw;
   height: 17.2vw;
   position: absolute;
@@ -119,36 +119,36 @@ body::-webkit-scrollbar{
   transition: opacity 0.5s;
 }
 
-#timeMsg{
+#systemMsg{
   position: absolute;
   top: 70vh;
   left: 62vw;
   background-image: linear-gradient(to right, #C2E9FB, #A1C4FD);
 }
 
-#messageMsg{
+#newsMsg{
   position: absolute;
   top: 40vh;
   left: 20vw;
   background-image: linear-gradient(to right, #ffd3f3, #b4a1e0);
 }
 
-#historyMsg{
+#peopleMsg{
   position: absolute;
   top: 68vh;
   left: 23vw;
   background-image: linear-gradient(to right, #f0d5b7, #f09ede);
 }
 
-#hotMsg{
+#historyMsg{
   position: absolute;
   top: 15vh;
   left: 27vw;
   background-image: linear-gradient(to right, #92e5eb, #f0d5b7);
 }
 
-.time_anima:hover ~#timeMsg, .message_anima:hover ~#messageMsg,
-.history_anima:hover ~#historyMsg, .hot_anima:hover ~#hotMsg{
+.news_anima:hover ~#newsMsg, .system_anima:hover ~#systemMsg,
+.people_anima:hover ~#peopleMsg, .history_anima:hover ~#historyMsg{
   opacity: 1;
   transition-duration: 0.5s;
 }
