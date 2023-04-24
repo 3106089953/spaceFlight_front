@@ -13,9 +13,6 @@ function display(id,id2){
     }
 }
 
-function update(){
-    
-}
 
 function display2(id1,id2,id3,id4,id5,id6,id7,id8,id9,id10,id11,id12,id13,
     img1,img2,img3,img4,img5,img6,img7,img8,img9,img10,img11,img12,img13){

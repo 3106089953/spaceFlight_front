@@ -1,6 +1,4 @@
-html {
-	cursor:url(../images/cursor_default_2.png),pointer;
-}
+
 
 /* -------------------------------------------主体部分 ----------*/
 @-webkit-keyframes aa {
@@ -78,34 +76,29 @@ to {top:0px;}
 	}
   }
   
-  @-webkit-keyframes scale-up-center {
+@keyframes scale-up-center {
 	0% {
-	  -webkit-transform: scale(0);
-			  transform: scale(0);
+	-webkit-transform: scale(1);
+	transform: scale(1);
 	}
 	100% {
-	  -webkit-transform: scale(1);
-			  transform: scale(1);
+	-webkit-transform: scale(1.1);
+	transform: scale(1.1);
 	}
-  }
-  @keyframes scale-up-center {
-	0% {
-	  -webkit-transform: scale(0);
-			  transform: scale(0);
-	}
-	100% {
-	  -webkit-transform: scale(1);
-			  transform: scale(1);
-	}
-  }
-
-
-#seven_item{
-	margin-left: 1vw;
-	margin-top: 1vh;
-	height:35vw;
-	width: 80vw;
 }
+
+@keyframes scale-down-center {
+	0% {
+	 -webkit-transform: scale(1.1);
+	 transform: scale(1.1);
+	}
+	100% {
+	 -webkit-transform: scale(1);
+	 transform: scale(1);
+	}
+}
+
+
 .pick{
 	margin-left: 5vw;
 	display: flex;
@@ -150,64 +143,7 @@ to {top:0px;}
 	position: absolute;
 	z-index: 800;
 }
-/* 后背淡化的图 */
-.pick:hover .project:first-of-type {
-	width: 160px; height: 240px;
-	background-image: url(../images/雪车1.png);
-	background-color: transparent;
-}
-.pick:hover .project:nth-of-type(2) {
-	width: 160px; height: 240px;
-	background-image: url(../images/冰壶1.png);
-	background-color: transparent;
-}
-.pick:hover .project:nth-of-type(3) {
-	width: 160px; height: 240px;
-	background-image: url(../images/冰球1.png);
-	background-color: transparent;
-}
-.pick:hover .project:nth-of-type(4) {
-	width: 160px; height: 240px;
-	background-image: url(../images/冬季两项1.png);
-	background-color: transparent;
-}
-.pick:hover .project:nth-of-type(5) {
-	width: 160px; height: 240px;
-	background-image: url(../images/雪橇1.png);
-	background-color: transparent;
-}
-.pick:hover .project:nth-of-type(6) {
-	width: 160px; height: 240px;
-	background-image: url(../images/滑冰1.png);
-	background-color: transparent;
-}
-.pick:hover .project:nth-of-type(7) {
-	width: 160px; height: 240px;
-	background-image: url(../images/滑雪1.png);
-	background-color: transparent;
-}
-/* 七张带背景色的卡片 */
-.project:first-of-type {
-	width: 160px; height: 240px;
-	background-image: url(../images/雪车2.png);border-radius:15px 0 0 15px;background-color:#FDC353;}
-.project:nth-of-type(2) {
-	width: 160px; height: 240px;
-	background-image: url(../images/冰壶2.png);/*border-radius:20px;*/background-color: #b3d8e0;}
-.project:nth-of-type(3) {
-	width: 160px; height: 240px;
-	background-image: url(../images/冰球2.png);/*border-radius:20px;*/background-color: #dbb7a3;}
-.project:nth-of-type(4) {
-	width: 160px; height: 240px;
-	background-image: url(../images/冬季两项2.png);/*border-radius:20px;*/background-color:#d1d7dd;}
-.project:nth-of-type(5) {
-	width: 160px; height: 240px;
-	background-image: url(../images/雪橇2.png);/*border-radius:20px;*/background-color: #FE8D6F;}
-.project:nth-of-type(6) {
-	width: 160px; height: 240px;
-	background-image: url(../images/滑冰2.png);/*border-radius:20px;*/background-color: #ffe3d9;}
-.project:nth-of-type(7) {
-	width: 160px; height: 240px;
-	background-image: url(../images/滑雪2.png);border-radius:0 15px 15px 0;background-color: #A0DDE0;}
+
 
 /* 有背景颜色的png图片 */
 .project:first-of-type .qiehuan,.project:nth-of-type(2) .qiehuan,.project:nth-of-type(3) .qiehuan {
@@ -317,7 +253,10 @@ left: -33vw
 	transform: scale(1.3);
 	color:#4f569e;
 }
-
+@keyframes heart{
+	from {transform:translate(0,0) }
+	to {transform:translate(0,15px)}/* 下浮高度 */
+  }
 @keyframes gradient {
 	0% {background-position: 0% 50%; }
 	50% {background-position: 100% 50%;}
@@ -441,20 +380,7 @@ html.page_index .system picture img{
 	padding: 10.5px 21px;
 }
 
-.system .position a {
-	position: relative;
-	display: block;
-	width: 45px;
-	height: 45px;
-	margin: 8px 0;
-	border-radius: 50%;
-	pointer-events: all;
-	-webkit-backface-visibility: hidden;
-	backface-visibility: hidden;
-	cursor:url(../images/cursor_default_1.png),pointer;
-	opacity: .35;
-	transition: transform 800ms ease-out, opacity 400ms
-}
+
 
 /* 缓慢右边进入 */
 html.status_init .system .position a {
@@ -493,7 +419,7 @@ button.return {
 	width: 12rem;
 	font-size: 16px;
 	margin-left: 20px;
-	padding: 0 0 100px;
+	padding: 0 0 0;
 }
 
 button.return .circle {
@@ -589,6 +515,10 @@ button:hover .button-text {
 	        animation: scale-up-center 0.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+#img1, #img2, #img3, #img4, #img5, #img6, #img7, #img8, #img9{
+	animation: heart 1.4s ease-in-out infinite alternate;
+}
+
 .font-style{
 	color: #5692e5;
 	font-size: 21px;
@@ -609,6 +539,7 @@ button:hover .button-text {
 }
 
 .test{
+	margin-top: 15vw;
 	width: 28vw;
 	border-radius: 20px;
 	background-color: rgba(255, 255, 255, 0.685);
@@ -617,12 +548,13 @@ button:hover .button-text {
 	align-items: center;
 	-webkit-animation: slide-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 	        animation: slide-right 0.8s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+			
 }
 
 .test img{
 	border-radius: 15px;
 	margin-top: 5vh;
-	width: 70%;
+	width: 40%;
 }
 
 .introText{
@@ -643,9 +575,9 @@ button:hover .button-text {
 }
 
 .title1{
-	margin-left: 16vw;
-	height: 15vw;
-	width: 30vw;
+	margin-left: 10vw;
+	height: 20vw;
+	width: 15vw;
 }
 
 .title img{
@@ -659,20 +591,8 @@ button:hover .button-text {
 	width: 35vw;
 }
 
-.page2_top{
-	position: absolute;
-	top: 6vh;
-	left: 17vw;
-	display: flex;
-}
 
-.page2_top button{
-	background-color: #e95a5a;
-	color: #fff;
-	font-weight:600;
-	padding: 0 9px;
-	cursor:url(../images/cursor_default_1.png),pointer;
-}
+
 
 #cover{
     width: 100vw;
@@ -685,30 +605,7 @@ button:hover .button-text {
     left: 0vw;
 }
 
-#medals_1994_con{
-    display: none;
-    position: absolute;
-    top: 8vw;
-    left: 13vw;
-    width: 75vw;
-    height: 38vw;
-    box-shadow: 0px 0px 20px rgba(0,0,0,0.42);
-    background-image: radial-gradient(circle,#c4dfff 15%,#edf9ff 35%,#edf9ff 50%);
-    border-radius: 20px;
-    overflow: visible;
-}
-.buttonX{
-    position: relative;
-    top: -35vw;
-    left: 72vw;
-    border:3px solid rgba(0,0,0,0.42);
-    color: rgba(0,0,0,0.42);
-    border-radius: 50%;
-	font-size: 1rem;
-    width: 2vw;
-    height: 2vw;
-	cursor:url(../images/cursor_default_1.png),pointer;
-}
+
 
 /* -----左上角sector部分 */
 .tips {
@@ -722,303 +619,76 @@ button:hover .button-text {
 	color: #fff;
 }
 
-.menuHolder {
-	width: 100px;
+.container_1{
+	width: 1300px;
+	height: 350px;
+	margin-left: 100px;
+  }
+  
+  .container_2{
+	width: 1300px;
+	height: 350px;
+	margin-left: 100px;
+  }
+
+.card3 {
+	width: 270px;
 	height: 100px;
-	margin: 5px 0 250px -5px;
-	position: relative;
-	z-index: 0;
+	border-radius: 30px;
+	margin-top: 40px;
+	margin-left: 310px;
+	float: left;
 }
 
-.menuHolder ul {
-	padding: 0;
-	margin: 0;
+.card3 ul{
 	list-style: none;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 0;
-	height: 0;
-}
-
-.menuHolder ul li {
-	border-radius: 0 0 300px 0;
-	width: 0;
-	height: 0;
-}
-
-.menuHolder ul li a {
-	color: #ffffff;
-	text-decoration: none;
-	font: bold 13px/30px arial, sans-serif;
 	text-align: center;
-	box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.4);
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	-ms-transform-origin: 0 0;
-	-o-transform-origin: 0 0;
-	transform-origin: 0 0;
+	padding: 0px;
 }
 
-.menuHolder ul.p1 li {
+.card3 li{
+	font-size: 16px;
+	width: 80%;
+	height: 25px;
+	background-color: #5692e5;
+	box-shadow: 0 0 4px #ababab;
+	color: #ffffff;
+	border-radius: 10px;
+	padding: 5px;
+	margin: 10px 0;
+	font-weight: 700;
+	-webkit-animation: scale-down-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-down-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+.card3 li:hover{
+	-webkit-animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+	animation: scale-up-center 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+}
+
+
+.system .position {
+	z-index: 7;
 	position: absolute;
-	left: 0;
-	top: 0;
+	bottom: 65%;
+	right: 15px;
+	transform: translateY(50%);
+	display: flex;
+	flex-direction: column;
+	padding: 10.5px 21px;
 }
 
-.menuHolder ul.p2 {
-	z-index: -1;
-}
-
-.menuHolder ul.p3 {
-	z-index: -1;
-}
-
-.menuHolder li.s1>a {
-	position: absolute;
+.system .position a {
+	position: relative;
 	display: block;
-	width: 100px;
-	height: 100px;
-	font-size: 18px;
-	background: #5383c3;
-	border-radius: 0 0 100px 0;
-}
-
-.menuHolder li.s2>a {
-	position: absolute;
-	display: block;
-	width: 100px;
-	padding-left: 100px;
-	height: 200px;
-	background: #007bbb;
-	border-radius: 0 0 200px 0;
-}
-
-.menuHolder ul.p3 li a {
-	position: absolute;
-	display: block;
-	width: 100px;
-	padding-left: 200px;
-	height: 300px;
-	background: #b9dee3;
-	border-radius: 0 0 300px 0;
-}
-
-.menuHolder ul ul {
-	-webkit-transform-origin: 0 0;
-	-moz-transform-origin: 0 0;
-	-ms-transform-origin: 0 0;
-	-o-transform-origin: 0 0;
-	transform-origin: 0 0;
-	-webkit-transform: rotate(90deg);
-	-moz-transform: rotateZ(90deg);
-	-ms-transform: rotate(90deg);
-	-o-transform: rotate(90deg);
-	transform: rotate(90deg);
-	-webkit-transition: 1s;
-	-moz-transition: 1s;
-	-ms-transition: 1s;
-	-o-transition: 1s;
-	transition: 1s;
-}
-.menuHolder li.s2:nth-of-type(7)>a {
-	background: #a0d8ef;
-	-webkit-transform: rotate(77.1deg);
-	-moz-transform: rotateZ(77.1deg);
-	-ms-transform: rotate(77.1deg);
-	-o-transform: rotate(77.1deg);
-	transform: rotate(77.1deg);
-}
-.menuHolder li.s2:nth-of-type(6)>a {
-	background: #89c3eb;
-	-webkit-transform: rotate(64.25deg);
-	-moz-transform: rotateZ(64.25deg);
-	-ms-transform: rotate(64.25deg);
-	-o-transform: rotate(64.25deg);
-	transform: rotate(64.25deg);
-}
-
-.menuHolder li.s2:nth-of-type(5)>a {
-	background: #2ca9e1;
-	-webkit-transform: rotate(51.4deg);
-	-moz-transform: rotateZ(51.4deg);
-	-ms-transform: rotate(51.4deg);
-	-o-transform: rotate(51.4deg);
-	transform: rotate(51.4deg);
-}
-
-.menuHolder li.s2:nth-of-type(4)>a {
-	background: #38a1db;
-	-webkit-transform: rotate(38.55deg);
-	-moz-transform: rotateZ(38.55deg);
-	-ms-transform: rotate(38.55deg);
-	-o-transform: rotate(38.55deg);
-	transform: rotate(38.55deg);
-}
-
-.menuHolder li.s2:nth-of-type(3)>a {
-	background: #0095d9;
-	-webkit-transform: rotate(25.7deg);
-	-moz-transform: rotateZ(25.7deg);
-	-ms-transform: rotate(25.7deg);
-	-o-transform: rotate(25.7deg);
-	transform: rotate(25.7deg);
-}
-
-.menuHolder li.s2:nth-of-type(2)>a {
-	background: #0094c8;
-	-webkit-transform: rotate(12.85deg);
-	-moz-transform: rotateZ(12.85deg);
-	-ms-transform: rotate(12.85deg);
-	-o-transform: rotate(12.85deg);
-	transform: rotate(12.85deg);
-}
-
-.menuHolder .a6 li:nth-of-type(6)>a {
-	background: #79a7cd;
-	-webkit-transform: rotate(75deg);
-	-moz-transform: rotateZ(75deg);
-	-ms-transform: rotate(75deg);
-	-o-transform: rotate(75deg);
-	transform: rotate(75deg);
-}
-
-.menuHolder .a6 li:nth-of-type(5)>a {
-	background: #70aace;
-	-webkit-transform: rotate(60deg);
-	-moz-transform: rotateZ(60deg);
-	-ms-transform: rotate(60deg);
-	-o-transform: rotate(60deg);
-	transform: rotate(60deg);
-}
-
-.menuHolder .a6 li:nth-of-type(4)>a {
-	background: #66a9c9;
-	-webkit-transform: rotate(45deg);
-	-moz-transform: rotateZ(45deg);
-	-ms-transform: rotate(45deg);
-	-o-transform: rotate(45deg);
-	transform: rotate(45deg);
-}
-
-.menuHolder .a6 li:nth-of-type(3)>a {
-	background: #8ecce2;
-	-webkit-transform: rotate(30deg);
-	-moz-transform: rotateZ(30deg);
-	-ms-transform: rotate(30deg);
-	-o-transform: rotate(30deg);
-	transform: rotate(30deg);
-}
-
-.menuHolder .a6 li:nth-of-type(2)>a {
-	background: #9ed1da;
-	-webkit-transform: rotate(15deg);
-	-moz-transform: rotateZ(15deg);
-	-ms-transform: rotate(15deg);
-	-o-transform: rotate(15deg);
-	transform: rotate(15deg);
-}
-
-.menuHolder .a3 li:nth-of-type(3)>a {
-	background: #8ecce2;
-	-webkit-transform: rotate(60deg);
-	-moz-transform: rotateZ(60deg);
-	-ms-transform: rotate(60deg);
-	-o-transform: rotate(60deg);
-	transform: rotate(60deg);
-}
-
-.menuHolder .a3 li:nth-of-type(2)>a {
-	background: #9ed1da;
-	-webkit-transform: rotate(30deg);
-	-moz-transform: rotateZ(30deg);
-	-ms-transform: rotate(30deg);
-	-o-transform: rotate(30deg);
-	transform: rotate(30deg);
-}
-
-.menuHolder li.s1:hover ul.p2 {
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotateZ(0deg);
-	-ms-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
-}
-
-.menuHolder li.s2:hover ul.p3 {
-	-webkit-transform: rotate(0deg);
-	-moz-transform: rotateZ(0deg);
-	-ms-transform: rotate(0deg);
-	-o-transform: rotate(0deg);
-	transform: rotate(0deg);
-}
-
-.menuHolder ul li:hover>a {
-	background: #11659a;
-	color: #fff;
-}
-
-.menuHolder li.s2:hover>a {
-	background: #477ec7;
-	color: #fff;
-}
-
-.menuHolder .a6 li:hover>a {
-	background: #477ec7;
-	color: #fff;
-}
-
-.menuHolder .a3 li:hover>a {
-	background: #477ec7;
-	color: #fff;
-}
-
-
-
-.menuWindow {
-	width: 110px;
-	height: 110px;
-	overflow: hidden;
-	position: absolute;
-	left: 0;
-	top: 0;
-	z-index: 100;
-	-webkit-transition: 0s 1s;
-	-moz-transition: 0s 1s;
-	-ms-transition: 0s 1s;
-	-o-transition: 0s 1s;
-	transition: 0s 1s;
-}
-
-.menuHolder:hover .menuWindow {
-	width: 310px;
-	height: 310px;
-	-webkit-transition: 0s 0s;
-	-moz-transition: 0s 0s;
-	-ms-transition: 0s 0s;
-	-o-transition: 0s 0s;
-	transition: 0s 0s;
-}
-
-.menuHolder span {
-	display: block;
-	-webkit-transform: rotate(5deg);
-	-moz-transform: rotateZ(5deg);
-	-ms-transform: rotate(5deg);
-	-o-transform: rotate(5deg);
-	transform: rotate(5deg);
-}
-
-.menuHolder~img.close {
-	width: 0;
-	height: 0;
-	position: fixed;
-	z-index: -1;
-	left: 0;
-	top: 0;
-}
-
-.menuHolder:hover~img.close {
-	width: 100%;
-	height: 100%;
+	width: 45px;
+	height: 45px;
+	margin: 8px 0;
+	border-radius: 50%;
+	pointer-events: all;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	cursor:url(../images/cursor_default_1.png),pointer;
+	opacity: .35;
+	transition: transform 800ms ease-out, opacity 400ms
 }
