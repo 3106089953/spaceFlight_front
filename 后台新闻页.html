@@ -13,7 +13,7 @@
 <body>
 	<div class="nk-container">
 		<!-- 头部 -->
-		<header class="bg-light sticky-top"  style="box-shadow: 5px 5px 5px #a5c9ec;">
+		<header class="bg-light sticky-top"  style="box-shadow: 5px 5px 5px #4f4fcddb;">
 			<div class="container" style="vertical-align: middle;height: 70px;">
 				<!-- 导航 -->
 				<nav class="navbar navbar-expand-lg navbar-dark">
@@ -41,8 +41,65 @@
 					</div>
 				</div>
 
-				<h3 class="text-center text-info border-bottom pb-3" style="color:  #a5c9ec !important;">新&nbsp;&nbsp;闻&nbsp;&nbsp;编&nbsp;&nbsp;辑</h3>
-				<!-- 用户列表 -->
+				<!-- 新增  -->
+                <div class="position-relative" style="height: 50px;">
+					<!-- 筛选条件 -->
+                    <button type="button" class="btn btn-primary btn-sm position-absolute rt-0"
+                        data-toggle="modal" data-target="#publishModal">
+						<i class="bi bi-plus-square"></i> 
+						新增新闻
+					</button>
+				</div>
+
+				<!-- 弹出框 -->
+				<div class="modal fade" id="publishModal" tabindex="-1" role="dialog" aria-labelledby="publishModalLabel" aria-hidden="true">-->
+					<div class="modal-dialog modal-lg" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="publishModalLabel">新闻发布</h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<div class="modal-body">
+								<form method="post" action="#">
+									<div class="form-group">
+										<label for="titleName" class="col-form-label">新闻编号：</label>
+										<input type="text" class="form-control" name="title" id="titleName">
+									</div>
+									<div class="form-group">
+										<label for="first" class="col-form-label">主标题：</label>
+										<input type="text" class="form-control" name="first" id="first">
+									</div>
+									<div class="form-group">
+										<label for="second" class="col-form-label">子标题：</label>
+										<input type="text" class="form-control" name="second" id="second">
+									</div>
+									<div class="form-group">
+										<label for="third" class="col-form-label">创建时间：</label>
+										<input type="text" class="form-control" name="third" id="third">
+									</div>
+									<div class="form-group">
+										<label for="forth" class="col-form-label">新闻链接：</label>
+										<input type="text" class="form-control" name="forth" id="forth">
+									</div>
+									<div class="form-group">
+										<label for="answer" class="col-form-label">新闻图片链接：</label>
+										<input type="text" class="form-control" name="answer" id="answer">
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+										<button type="submit" class="btn btn-primary">提交</button>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<h3 class="text-center text-info border-bottom pb-3" style="color:  #3333CC !important;">新&nbsp;&nbsp;闻&nbsp;&nbsp;编&nbsp;&nbsp;辑</h3>
+				<!-- 新闻列表 -->
 				<table class="table table-bordered" style="font-family: '楷体'; font-size: 17px;">
                     <thead>
                       <tr>
@@ -60,7 +117,7 @@
                         <td>管理员</td>
                         <td>2022-5-12</td>
                         <td>
-                            <a href="#">
+                            <a href="./后台新闻编辑.html" style="text-decoration:none;">
 								<button type="button" class="btn btn-primary">编辑</button>
 							</a>
 							<a href="#">
@@ -95,7 +152,7 @@
 		</div>
 
 		<!-- 尾部 -->
-		<footer class="bg-dark" style="background-color: #a5c9ec!important;">
+		<footer class="bg-dark" style="background-color: #3333CC!important;">
 			<div class="container">
 				<div class="row">
 					<!-- 火箭 -->
@@ -107,26 +164,27 @@
 						<div class="row">
 							<div class="col">
 								<ul class="nav btn-group-vertical company-info">
-									<li class="nav-item text-white-50" style="font-weight: 800; font-size: large;">
+									<li class="nav-item text-white-80" style="font-weight: 800; font-size: large;">
 										<i class="bi bi-heart"></i> 页面介绍：
 									</li>
-									<li class="nav-item text-white-50" style="font-size: medium;">
+									<li class="nav-item text-white-80" style="font-size: medium;">
 										该页面主要用于进行新闻的详细信息展示
 									</li>
-									<li class="nav-item text-white-50" style="font-weight: 800; font-size: large;">
+									<li class="nav-item text-white-80" style="font-weight: 800; font-size: large;">
 										<i class="bi bi-book"></i> 温馨提示：
 									</li>
-									<li class="nav-item text-white-50" style="font-size: medium;">
-										如果需要查看对应的数据内容，请跳转到数据主页
+									<li class="nav-item text-white-80" style="font-size: medium;">
+										如果需要查看对应的数据内容，请跳转到
+										<a href="./航天新闻.html" class="nav-item text-white-80">新闻主页</a>
 									</li>
 								</ul>
 							</div>
 						</div>
 					</div>
 					<!-- 宇航员 -->
-					<div class="col-4 qrcode">
+					<!-- <div class="col-4 qrcode">
 						<img src="./assets/images/后台管理_宇航员.png"  class="img-thumbnail" style="width:136px;" />
-					</div>
+					</div> -->
 				</div>
 			</div>
 		</footer>

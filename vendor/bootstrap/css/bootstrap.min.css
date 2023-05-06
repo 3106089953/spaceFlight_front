@@ -8621,6 +8621,11 @@ fieldset:disabled .btn {
 	color: rgba(255, 255, 255, .5) !important
 }
 
+.text-white-80 {
+	--bs-text-opacity: 1;
+	color: rgba(255, 255, 255, .8) !important
+}
+
 .text-reset {
 	--bs-text-opacity: 1;
 	color: inherit !important

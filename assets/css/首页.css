@@ -100,7 +100,7 @@ body::-webkit-scrollbar{
   position: absolute;
   top: 70vh;
   left: 78vw;
-  background-image: linear-gradient(to right, #ffd3f3, #b4a1e0);
+  background-image: linear-gradient(to right, #a5e7f0, #b4a1e0);
 }
 
 #peopleMsg{
@@ -114,7 +114,7 @@ body::-webkit-scrollbar{
   position: absolute;
   top: 30vh;
   left: 70vw;
-  background-image: linear-gradient(to right, #92e5eb, #f0d5b7);
+  background-image: linear-gradient(to right, #e69d87, #f0d5b7);
 }
 
 .news_anima:hover ~#newsMsg, .system_anima:hover ~#systemMsg,
@@ -176,7 +176,7 @@ a {
 
 /* 鼠标放上菜单字体颜色改变 */
 .nav li:hover a{
-  color: #3141d8d8!important;
+  color: #3333CC!important;
 }
 /* 菜单对应小图标样式 */
 .nav img{
